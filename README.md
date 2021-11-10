@@ -12,7 +12,7 @@ Install Weka from [here](https://www.cs.waikato.ac.nz/ml/weka/). The download co
 ## Step 3
 The file `data/titanic.arff` contains a data set in the ARFF format used by Weka. It's essentially the same file as you produced in the last exercise. Feel free to inspect it.
 
-Load the file in the Weka explorer and try to find the best method to predict how survivors!
+Load the file in the Weka explorer and try to find the best method to predict the survivors!
 
 Hints:
 
