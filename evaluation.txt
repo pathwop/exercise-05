@@ -1,0 +1,97 @@
+=== Run information ===
+
+Scheme:       weka.classifiers.trees.J48 -C 0.25 -M 2
+Relation:     titanic-weka.filters.unsupervised.attribute.Remove-R1,3,8,10
+Instances:    891
+Attributes:   8
+              Pclass
+              Sex
+              Age
+              SibSp
+              Parch
+              Fare
+              Embarked
+              Survived
+Test mode:    10-fold cross-validation
+
+=== Classifier model (full training set) ===
+
+J48 pruned tree
+------------------
+
+Sex = male
+|   Pclass <= 1
+|   |   Fare <= 26: 0 (10.0)
+|   |   Fare > 26
+|   |   |   Age <= 53
+|   |   |   |   Fare <= 27: 1 (12.56/1.78)
+|   |   |   |   Fare > 27
+|   |   |   |   |   Parch <= 1: 0 (67.68/25.12)
+|   |   |   |   |   Parch > 1
+|   |   |   |   |   |   Fare <= 164.8667: 1 (5.0)
+|   |   |   |   |   |   Fare > 164.8667: 0 (2.0)
+|   |   |   Age > 53: 0 (24.76/4.11)
+|   Pclass > 1
+|   |   Age <= 9
+|   |   |   SibSp <= 2
+|   |   |   |   Parch <= 0: 0 (8.1/0.77)
+|   |   |   |   Parch > 0: 1 (16.26/0.09)
+|   |   |   SibSp > 2: 0 (14.43/1.0)
+|   |   Age > 9: 0 (416.22/46.06)
+Sex = female
+|   Pclass <= 2: 1 (170.0/9.0)
+|   Pclass > 2
+|   |   Fare <= 23.25
+|   |   |   Embarked = S
+|   |   |   |   Parch <= 0: 0 (45.0/20.0)
+|   |   |   |   Parch > 0
+|   |   |   |   |   Parch <= 1
+|   |   |   |   |   |   SibSp <= 2: 1 (10.0/3.0)
+|   |   |   |   |   |   SibSp > 2: 0 (2.0)
+|   |   |   |   |   Parch > 1
+|   |   |   |   |   |   Age <= 28: 1 (4.0)
+|   |   |   |   |   |   Age > 28: 0 (2.0)
+|   |   |   Embarked = C
+|   |   |   |   Fare <= 15.2458
+|   |   |   |   |   Fare <= 13.8625: 1 (6.0)
+|   |   |   |   |   Fare > 13.8625: 0 (10.0/2.0)
+|   |   |   |   Fare > 15.2458: 1 (7.0)
+|   |   |   Embarked = Q
+|   |   |   |   Parch <= 0
+|   |   |   |   |   Fare <= 7.65: 0 (2.0)
+|   |   |   |   |   Fare > 7.65: 1 (27.0/4.0)
+|   |   |   |   Parch > 0: 0 (2.0)
+|   |   Fare > 23.25: 0 (27.0/3.0)
+
+Number of Leaves  : 	23
+
+Size of the tree : 	44
+
+
+Time taken to build model: 0.01 seconds
+
+=== Stratified cross-validation ===
+=== Summary ===
+
+Correctly Classified Instances         725               81.3692 %
+Incorrectly Classified Instances       166               18.6308 %
+Kappa statistic                          0.5856
+Mean absolute error                      0.2592
+Root mean squared error                  0.378 
+Relative absolute error                 54.7869 %
+Root relative squared error             77.7271 %
+Total Number of Instances              891     
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 0.931    0.374    0.800      0.931    0.860      0.601    0.811     0.818     0
+                 0.626    0.069    0.849      0.626    0.721      0.601    0.811     0.761     1
+Weighted Avg.    0.814    0.257    0.819      0.814    0.807      0.601    0.811     0.796     
+
+=== Confusion Matrix ===
+
+   a   b   <-- classified as
+ 511  38 |   a = 0
+ 128 214 |   b = 1
+ 
