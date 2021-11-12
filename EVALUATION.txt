@@ -1,0 +1,150 @@
+=== Run information ===
+
+Scheme:       weka.classifiers.trees.J48 -C 0.25 -M 2
+Relation:     titanic-weka.filters.supervised.attribute.NominalToBinary_partitionMembership-weka.filters.supervised.attribute.PartitionMembership-Wweka.classifiers.trees.J48---C0.25-M2-weka.filters.supervised.attribute.NominalToBinary
+Instances:    891
+Attributes:   70
+              partition_0
+              partition_1
+              partition_2
+              partition_3
+              partition_4
+              partition_5
+              partition_6
+              partition_7
+              partition_8
+              partition_9
+              partition_10
+              partition_11
+              partition_12
+              partition_13
+              partition_14
+              partition_15
+              partition_16
+              partition_17
+              partition_18
+              partition_19
+              partition_20
+              partition_21
+              partition_22
+              partition_23
+              partition_24
+              partition_25
+              partition_26
+              partition_27
+              partition_28
+              partition_29
+              partition_30
+              partition_31
+              partition_32
+              partition_33
+              partition_34
+              partition_35
+              partition_36
+              partition_37
+              partition_38
+              partition_39
+              partition_40
+              partition_41
+              partition_42
+              partition_43
+              partition_44
+              partition_45
+              partition_46
+              partition_47
+              partition_48
+              partition_49
+              partition_50
+              partition_51
+              partition_52
+              partition_53
+              partition_54
+              partition_55
+              partition_56
+              partition_57
+              partition_58
+              partition_59
+              partition_60
+              partition_61
+              partition_62
+              partition_63
+              partition_64
+              partition_65
+              partition_66
+              partition_67
+              partition_68
+              Survived
+Test mode:    10-fold cross-validation
+
+=== Classifier model (full training set) ===
+
+J48 pruned tree
+------------------
+
+partition_45 <= 0
+|   partition_23 <= 0.085227
+|   |   partition_53 <= 0
+|   |   |   partition_55 <= 0.662269
+|   |   |   |   partition_57 <= 0
+|   |   |   |   |   partition_19 <= 0
+|   |   |   |   |   |   partition_32 <= 0
+|   |   |   |   |   |   |   partition_1 <= 0
+|   |   |   |   |   |   |   |   partition_26 <= 0
+|   |   |   |   |   |   |   |   |   partition_59 <= 0
+|   |   |   |   |   |   |   |   |   |   partition_47 <= 0
+|   |   |   |   |   |   |   |   |   |   |   partition_11 <= 0: 1 (172.0/9.0)
+|   |   |   |   |   |   |   |   |   |   |   partition_11 > 0
+|   |   |   |   |   |   |   |   |   |   |   |   partition_34 <= 0
+|   |   |   |   |   |   |   |   |   |   |   |   |   partition_50 <= 0: 0 (44.0/13.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   partition_50 > 0: 1 (2.0)
+|   |   |   |   |   |   |   |   |   |   |   |   partition_34 > 0: 1 (2.0)
+|   |   |   |   |   |   |   |   |   |   partition_47 > 0: 0 (9.0/3.0)
+|   |   |   |   |   |   |   |   |   partition_59 > 0: 1 (6.0/1.0)
+|   |   |   |   |   |   |   |   partition_26 > 0: 1 (4.0)
+|   |   |   |   |   |   |   partition_1 > 0: 0 (518.0/61.0)
+|   |   |   |   |   |   partition_32 > 0
+|   |   |   |   |   |   |   partition_43 <= 0: 0 (3.0)
+|   |   |   |   |   |   |   partition_43 > 0: 1 (6.0)
+|   |   |   |   |   partition_19 > 0: 0 (25.0/1.0)
+|   |   |   |   partition_57 > 0
+|   |   |   |   |   partition_67 <= 0: 1 (7.0)
+|   |   |   |   |   partition_67 > 0: 0 (6.0/2.0)
+|   |   |   partition_55 > 0.662269: 1 (21.0/4.0)
+|   |   partition_53 > 0
+|   |   |   partition_65 <= 0: 1 (11.0)
+|   |   |   partition_65 > 0: 0 (2.0)
+|   partition_23 > 0.085227: 1 (16.0)
+partition_45 > 0: 1 (37.0/8.0)
+
+Number of Leaves  : 	18
+
+Size of the tree : 	35
+
+
+Time taken to build model: 0.31 seconds
+
+=== Stratified cross-validation ===
+=== Summary ===
+
+Correctly Classified Instances         763               85.6341 %
+Incorrectly Classified Instances       128               14.3659 %
+Kappa statistic                          0.6887
+Mean absolute error                      0.2161
+Root mean squared error                  0.3442
+Relative absolute error                 45.6687 %
+Root relative squared error             70.7732 %
+Total Number of Instances              891     
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 0,923    0,251    0,855      0,923    0,888      0,693    0,862     0,859     0
+                 0,749    0,077    0,859      0,749    0,800      0,693    0,862     0,830     1
+Weighted Avg.    0,856    0,184    0,857      0,856    0,854      0,693    0,862     0,848     
+
+=== Confusion Matrix ===
+
+   a   b   <-- classified as
+ 507  42 |   a = 0
+  86 256 |   b = 1
+
