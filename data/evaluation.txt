@@ -1,0 +1,70 @@
+=== Run information ===
+
+Scheme:       weka.classifiers.trees.J48 -B -C 0.25 -M 10 -output-debug-info
+Relation:     titanic-weka.filters.unsupervised.attribute.Remove-R6-7-weka.filters.unsupervised.attribute.Remove-R9-weka.filters.unsupervised.attribute.Remove-R3-weka.filters.unsupervised.attribute.Remove-R1
+Instances:    891
+Attributes:   7
+              Pclass
+              Sex
+              Age
+              Ticket
+              Fare
+              Cabin
+              Survived
+Test mode:    split 66.0% train, remainder test
+
+=== Classifier model (full training set) ===
+
+J48 pruned tree
+------------------
+
+Sex = male
+|   Pclass <= 1.0
+|   |   Fare <= 26.0: 0 (10.0)
+|   |   Fare > 26.0
+|   |   |   Age <= 53.0
+|   |   |   |   Fare <= 27.0: 1 (12.56/1.78)
+|   |   |   |   Fare > 27.0: 0 (74.68/30.12)
+|   |   |   Age > 53.0: 0 (24.76/4.11)
+|   Pclass > 1.0: 0 (455.0/64.0)
+Sex != male
+|   Pclass <= 2.0: 1 (170.0/9.0)
+|   Pclass > 2.0
+|   |   Fare <= 23.25: 1 (117.0/48.0)
+|   |   Fare > 23.25: 0 (27.0/3.0)
+
+Number of Leaves  : 	8
+
+Size of the tree : 	15
+
+
+Time taken to build model: 0 seconds
+
+=== Evaluation on test split ===
+
+Time taken to test model on test split: 0.01 seconds
+
+=== Summary ===
+
+Correctly Classified Instances         245               80.8581 %
+Incorrectly Classified Instances        58               19.1419 %
+Kappa statistic                          0.585 
+Mean absolute error                      0.2757
+Root mean squared error                  0.3734
+Relative absolute error                 58.3795 %
+Root relative squared error             77.0527 %
+Total Number of Instances              303     
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 0,873    0,298    0,829      0,873    0,851      0,586    0,838     0,840     0
+                 0,702    0,127    0,769      0,702    0,734      0,586    0,838     0,787     1
+Weighted Avg.    0,809    0,234    0,807      0,809    0,807      0,586    0,838     0,820     
+
+=== Confusion Matrix ===
+
+   a   b   <-- classified as
+ 165  24 |   a = 0
+  34  80 |   b = 1
+
