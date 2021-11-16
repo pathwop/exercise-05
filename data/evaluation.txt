@@ -1,0 +1,60 @@
+=== Run information ===
+
+Scheme:       weka.classifiers.rules.JRip -F 3 -N 2.0 -O 2 -S 1
+Relation:     titanic
+Instances:    891
+Attributes:   12
+              PassengerId
+              Pclass
+              Name
+              Sex
+              Age
+              SibSp
+              Parch
+              Ticket
+              Fare
+              Cabin
+              Embarked
+              Survived
+Test mode:    10-fold cross-validation
+
+=== Classifier model (full training set) ===
+
+JRIP rules:
+===========
+
+(Sex = female) and (Pclass <= 2) => Survived=1 (170.0/9.0)
+(Sex = female) and (Fare <= 8.0292) => Survived=1 (49.0/15.0)
+(Fare >= 11.1333) and (Age <= 8) and (SibSp <= 2) => Survived=1 (25.0/0.0)
+(Fare >= 15.2458) and (Pclass <= 1) and (Age <= 42) and (PassengerId >= 391) => Survived=1 (28.0/8.0)
+ => Survived=0 (619.0/102.0)
+
+Number of Rules : 5
+
+
+Time taken to build model: 0.14 seconds
+
+=== Stratified cross-validation ===
+=== Summary ===
+
+Correctly Classified Instances         724               81.257  %
+Incorrectly Classified Instances       167               18.743  %
+Kappa statistic                          0.5909
+Mean absolute error                      0.2709
+Root mean squared error                  0.3818
+Relative absolute error                 57.2722 %
+Root relative squared error             78.516  %
+Total Number of Instances              891     
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 0,900    0,327    0,815      0,900    0,855      0,597    0,807     0,814     0
+                 0,673    0,100    0,807      0,673    0,734      0,597    0,807     0,768     1
+Weighted Avg.    0,813    0,240    0,812      0,813    0,809      0,597    0,807     0,796     
+
+=== Confusion Matrix ===
+
+   a   b   <-- classified as
+ 494  55 |   a = 0
+ 112 230 |   b = 1
