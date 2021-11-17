@@ -1,0 +1,47 @@
+=== Run information ===
+
+Scheme:       weka.classifiers.rules.OneR -B 6
+Relation:     titanic-weka.filters.unsupervised.attribute.Remove-R1-3,6-9,11
+Instances:    891
+Attributes:   4
+              Sex
+              Age
+              Cabin
+              Survived
+Test mode:    10-fold cross-validation
+
+=== Classifier model (full training set) ===
+
+Sex:
+	male	-> 0
+	female	-> 1
+(701/891 instances correct)
+
+
+Time taken to build model: 0 seconds
+
+=== Stratified cross-validation ===
+=== Summary ===
+
+Correctly Classified Instances         701               78.6756 %
+Incorrectly Classified Instances       190               21.3244 %
+Kappa statistic                          0.5421
+Mean absolute error                      0.2132
+Root mean squared error                  0.4618
+Relative absolute error                 45.0753 %
+Root relative squared error             94.954  %
+Total Number of Instances              891     
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 0,852    0,319    0,811      0,852    0,831      0,543    0,767     0,782     0
+                 0,681    0,148    0,742      0,681    0,710      0,543    0,767     0,628     1
+Weighted Avg.    0,787    0,253    0,785      0,787    0,785      0,543    0,767     0,723     
+
+=== Confusion Matrix ===
+
+   a   b   <-- classified as
+ 468  81 |   a = 0
+ 109 233 |   b = 1
+
