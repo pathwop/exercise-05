@@ -1,4 +1,4 @@
-=== Run information ===
+=== Run information ====
 
 Scheme:       weka.classifiers.bayes.NaiveBayes 
 Relation:     titanic-weka.filters.unsupervised.attribute.Remove-R11-weka.filters.unsupervised.attribute.RemoveByName-EEmbarked
