@@ -1,0 +1,62 @@
+=== Run information ===
+
+Scheme:       weka.classifiers.trees.J48 -C 0.25 -M 2
+Relation:     titanic-weka.filters.unsupervised.attribute.Remove-R3,6-9,11
+Instances:    891
+Attributes:   6
+              PassengerId
+              Pclass
+              Sex
+              Age
+              Cabin
+              Survived
+Test mode:    10-fold cross-validation
+
+=== Classifier model (full training set) ===
+
+J48 pruned tree
+------------------
+
+Sex = male
+|   Pclass <= 2
+|   |   Age <= 12: 1 (13.8/1.38)
+|   |   Age > 12: 0 (216.2/49.58)
+|   Pclass > 2: 0 (347.0/47.0)
+Sex = female
+|   Pclass <= 2: 1 (170.0/9.0)
+|   Pclass > 2
+|   |   Age <= 38: 1 (127.06/59.0)
+|   |   Age > 38: 0 (16.94/3.94)
+
+Number of Leaves  : 	6
+
+Size of the tree : 	11
+
+
+Time taken to build model: 0.05 seconds
+
+=== Stratified cross-validation ===
+=== Summary ===
+
+Correctly Classified Instances         702               78.7879 %
+Incorrectly Classified Instances       189               21.2121 %
+Kappa statistic                          0.5344
+Mean absolute error                      0.2955
+Root mean squared error                  0.3887
+Relative absolute error                 62.4579 %
+Root relative squared error             79.9203 %
+Total Number of Instances              891     
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 0,889    0,374    0,792      0,889    0,838      0,542    0,811     0,820     0
+                 0,626    0,111    0,778      0,626    0,694      0,542    0,811     0,763     1
+Weighted Avg.    0,788    0,273    0,787      0,788    0,782      0,542    0,811     0,798     
+
+=== Confusion Matrix ===
+
+   a   b   <-- classified as
+ 488  61 |   a = 0
+ 128 214 |   b = 1
+
