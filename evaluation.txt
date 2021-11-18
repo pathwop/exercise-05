@@ -1,0 +1,193 @@
+=== Run information ===
+
+Scheme:       weka.classifiers.meta.LogitBoost -P 100 -L -1.7976931348623157E308 -H 1.0 -Z 3.0 -O 1 -E 1 -S 1 -I 10 -W weka.classifiers.trees.DecisionStump
+Relation:     titanic-weka.filters.supervised.attribute.AttributeSelection-Eweka.attributeSelection.GainRatioAttributeEval-Sweka.attributeSelection.Ranker -T -1.7976931348623157E308 -N -1-weka.filters.AllFilter
+Instances:    891
+Attributes:   12
+              Sex
+              Name
+              Ticket
+              Fare
+              Pclass
+              Age
+              SibSp
+              Parch
+              Embarked
+              Cabin
+              PassengerId
+              Survived
+Test mode:    10-fold cross-validation
+
+=== Classifier model (full training set) ===
+
+LogitBoost: Base classifiers and their weights:
+
+Iteration 1
+	Class 1 (Survived=0)
+
+Decision Stump
+
+Classifications
+
+Sex = male : 1.244367417677643
+Sex != male : -0.9681528662420382
+Sex is missing : 0.46464646464646464
+
+Two-class case: second classifier predicts additive inverse of first classifier and is not explicitly computed.
+
+
+Iteration 2
+	Class 1 (Survived=0)
+
+Decision Stump
+
+Classifications
+
+Pclass <= 2.5 : -0.6080722171740087
+Pclass > 2.5 : 0.6559518591277025
+Pclass is missing : 0.0833706511784623
+
+Two-class case: second classifier predicts additive inverse of first classifier and is not explicitly computed.
+
+
+Iteration 3
+	Class 1 (Survived=0)
+
+Decision Stump
+
+Classifications
+
+Cabin = C49 : 3.0
+Cabin != C49 : -0.576632460296536
+Cabin is missing : 0.23206543069157323
+
+Two-class case: second classifier predicts additive inverse of first classifier and is not explicitly computed.
+
+
+Iteration 4
+	Class 1 (Survived=0)
+
+Decision Stump
+
+Classifications
+
+Age <= 6.5 : -1.2945173232121285
+Age > 6.5 : 0.1287806873336475
+Age is missing : 0.0132787109519293
+
+Two-class case: second classifier predicts additive inverse of first classifier and is not explicitly computed.
+
+
+Iteration 5
+	Class 1 (Survived=0)
+
+Decision Stump
+
+Classifications
+
+SibSp <= 2.5 : -0.08176790224583112
+SibSp > 2.5 : 1.2799709727627835
+SibSp is missing : -0.0064854738574105335
+
+Two-class case: second classifier predicts additive inverse of first classifier and is not explicitly computed.
+
+
+Iteration 6
+	Class 1 (Survived=0)
+
+Decision Stump
+
+Classifications
+
+Age <= 36.25 : -0.18801445448627957
+Age > 36.25 : 0.49223073794352734
+Age is missing : 0.0012987717194597205
+
+Two-class case: second classifier predicts additive inverse of first classifier and is not explicitly computed.
+
+
+Iteration 7
+	Class 1 (Survived=0)
+
+Decision Stump
+
+Classifications
+
+Ticket = 1601 : -2.493597607505763
+Ticket != 1601 : 0.026828968114997822
+Ticket is missing : -0.001526769027637939
+
+Two-class case: second classifier predicts additive inverse of first classifier and is not explicitly computed.
+
+
+Iteration 8
+	Class 1 (Survived=0)
+
+Decision Stump
+
+Classifications
+
+Embarked = S : 0.16172901939003795
+Embarked != S : -0.40685325056943117
+Embarked is missing : -1.2045822768626695
+
+Two-class case: second classifier predicts additive inverse of first classifier and is not explicitly computed.
+
+
+Iteration 9
+	Class 1 (Survived=0)
+
+Decision Stump
+
+Classifications
+
+Sex = male : 0.16189534546924306
+Sex != male : -0.2540848232536578
+Sex is missing : 0.0033012372413563874
+
+Two-class case: second classifier predicts additive inverse of first classifier and is not explicitly computed.
+
+
+Iteration 10
+	Class 1 (Survived=0)
+
+Decision Stump
+
+Classifications
+
+Age <= 1.5 : -1.5275131187776863
+Age > 1.5 : -0.0014544347285912747
+Age is missing : 0.16990155673261823
+
+Two-class case: second classifier predicts additive inverse of first classifier and is not explicitly computed.
+
+Number of performed iterations: 10
+
+
+Time taken to build model: 0.15 seconds
+
+=== Stratified cross-validation ===
+=== Summary ===
+
+Correctly Classified Instances         717               80.4714 %
+Incorrectly Classified Instances       174               19.5286 %
+Kappa statistic                          0.5853
+Mean absolute error                      0.2828
+Root mean squared error                  0.3743
+Relative absolute error                 59.7815 %
+Root relative squared error             76.9616 %
+Total Number of Instances              891
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 0,849    0,266    0,837      0,849    0,843      0,585    0,852     0,867     0
+                 0,734    0,151    0,751      0,734    0,743      0,585    0,852     0,809     1
+Weighted Avg.    0,805    0,222    0,804      0,805    0,804      0,585    0,852     0,845
+
+=== Confusion Matrix ===
+
+   a   b   <-- classified as
+ 466  83 |   a = 0
+  91 251 |   b = 1
+
